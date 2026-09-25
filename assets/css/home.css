@@ -49,6 +49,7 @@
 }
 .beats > div:first-child{
     justify-content:space-between;
+    gap:1rem;
 }
 .beats > div:first-child > div{
     display:flex;
