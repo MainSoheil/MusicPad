@@ -23,7 +23,7 @@
 .board > button:active{
     cursor:grabbing;
 }
-.board > button > svg{
+.board > button > img{
     width:36px;
 }
 .board > button > span{
@@ -137,53 +137,3 @@
 .beats > div:not(:first-child) > div:last-child > button.delete{
     background:url('../icon/delete.svg') center / 60% no-repeat, var(--color-background);
 }
-
-/* .beats{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    list-style-type:none;
-    padding:10px 2rem 5rem 2rem;
-    width:90%;
-    margin:auto;
-    font-size: larger;
-    gap:2rem;
-    counter-reset: beat-counter;
-}
-.beats > div {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-.beats > div::before{
-    counter-increment: beat-counter; 
-    content: counter(beat-counter, upper-alpha);
-    min-width: 30px; 
-}
-.beats > div > div{
-    width:100%;
-    display:flex;
-    justify-content:left;
-    flex-wrap:wrap;
-    gap:2rem;
-    background-color:var(--color-surface);
-    border-radius:10px;
-    padding:2rem;
-    counter-reset:chord-counter;
-}
-.beats > div > div > span{
-    position:relative;
-    display:block;
-    align-items:center;
-    width:50px;
-    height:50px;
-    border-radius:10px;
-}
-.beats > div > div > span::before{
-    position:absolute;
-    top:50%;
-    left:-40%;
-    transform:translateY(-50%);
-    counter-increment: chord-counter; 
-    content: counter(chord-counter, decimal);
-} */
