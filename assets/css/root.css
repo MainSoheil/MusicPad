@@ -1,0 +1,88 @@
+:root {
+    /* Base */
+    --color-background: #0B0F19;
+    --color-surface: #121826;
+    --color-border: #273249;
+    --color-button: #1f1f2c;
+
+    /* Text */
+    --color-text: #F5F7FF;
+    --color-text-muted: #8B95AA;
+
+    /* Accent */
+    --color-white: #FFF;
+    --color-dark: #333;
+    --color-purple: #8B5CF6;
+    --color-blue: #3B82F6;
+    --color-cyan: #06B6D4;
+    --color-green: #22C55E;
+    --color-orange: #F97316;
+    --color-pink: #EC4899;
+}
+.bg{
+    border:1px solid;
+    transition:background 300ms ease;
+}
+.bg:hover{
+    filter: brightness(1.2);
+}
+.bg:active{
+    filter: brightness(0.8);
+}
+
+.bg-purple{
+    border-color:var(--color-purple);
+    background: radial-gradient(circle at center, var(--color-surface), var(--color-purple));
+}
+.bg-purple:hover{
+    background: var(--color-purple);
+}
+.bg-blue{
+    border-color: var(--color-blue);
+    background: radial-gradient(circle at center, var(--color-surface), var(--color-blue));
+}
+.bg-blue:hover{
+    background: var(--color-blue);
+}
+.bg-cyan{
+    border-color: var(--color-cyan);
+    background: radial-gradient(circle at center, var(--color-surface), var(--color-cyan));
+}
+.bg-cyan:hover{
+    background: var(--color-cyan);
+}
+.bg-green{
+    border-color: var(--color-green);
+    background: radial-gradient(circle at center, var(--color-surface), var(--color-green));
+}
+.bg-green:hover{
+    background: var(--color-green);
+}
+.bg-orange{
+    border-color: var(--color-orange);
+    background: radial-gradient(circle at center, var(--color-surface), var(--color-orange));
+}
+.bg-orange:hover{
+    background: var(--color-orange);
+}
+.bg-pink{
+    border-color: var(--color-pink);
+    background: radial-gradient(circle at center, var(--color-surface), var(--color-pink));
+}
+.bg-pink:hover{
+    background: var(--color-pink);
+}
+.bg-white{
+    border-color: var(--color-white);
+    background: radial-gradient(circle at center, var(--color-surface), var(--color-white));
+}
+.bg-white:hover{
+    background: var(--color-white);
+}
+.bg-dark{
+    border-color: var(--color-dark);
+    background: radial-gradient(circle at center, var(--color-surface), var(--color-dark));
+}
+.bg-dark:hover{
+    background: var(--color-dark);
+}
