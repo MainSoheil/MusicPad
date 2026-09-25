@@ -1,0 +1,50 @@
+.icon-kick   { --icon-url: url('../icon/kick.svg'); }
+.icon-snare  { --icon-url: url('../icon/snare.svg'); }
+.icon-hi-hat { --icon-url: url('../icon/hi-hat.svg'); }
+.icon-clap   { --icon-url: url('../icon/clap.svg'); }
+.icon-sub    { --icon-url: url('../icon/sub.svg'); }
+.icon-reese  { --icon-url: url('../icon/reese.svg'); }
+.icon-wobble { --icon-url: url('../icon/wobble.svg'); }
+.icon-pluck  { --icon-url: url('../icon/pluck.svg'); }
+.icon-solo   { --icon-url: url('../icon/solo.svg'); }
+.icon-chord  { --icon-url: url('../icon/chord.svg'); }
+
+.icon-kick,
+.icon-snare,
+.icon-hi-hat,
+.icon-clap,
+.icon-sub,
+.icon-reese,
+.icon-wobble,
+.icon-pluck,
+.icon-solo,
+.icon-chord {
+    transition: background 200ms ease;
+    background: 
+        var(--icon-url) center / 60% no-repeat, 
+        radial-gradient(circle at center, var(--color-dark), var(--color-button));
+}
+
+.icon-kick:hover,
+.icon-snare:hover,
+.icon-hi-hat:hover,
+.icon-clap:hover,
+.icon-sub:hover,
+.icon-reese:hover,
+.icon-wobble:hover,
+.icon-pluck:hover,
+.icon-solo:hover,
+.icon-chord:hover {
+    background: 
+        var(--icon-url) center / 60% no-repeat, 
+        radial-gradient(circle at center, var(--color-white), var(--color-dark));
+    background-position: 50% 30%, center; 
+}
+.icon-sub,
+.icon-reese {
+    background-position: 50% 80%, center; 
+}
+.icon-sub:hover,
+.icon-reese:hover {
+    background-position: 50%, center; 
+}

@@ -1,0 +1,188 @@
+@import './icons.css';
+
+.board{
+    display:grid;
+    grid-template-columns:repeat(7, 1fr);
+    gap:5px;
+    width:80%;
+    background-color: var(--color-surface);
+    margin:2rem auto;
+    padding:2rem;
+    border-radius:10px;
+    font-size:1rem;
+}
+.board > button{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:1rem 0;
+    gap:0.5rem;
+    cursor:grab;
+}
+.board > button:active{
+    cursor:grabbing;
+}
+.board > button > svg{
+    width:36px;
+}
+.board > button > span{
+    font-size:1.2rem;
+    text-transform:capitalize;
+}
+
+.beats{
+    display:flex;
+    flex-direction:column;
+    width:90%;
+    margin:1rem auto;
+    background-color:var(--color-surface);
+    padding:1rem;
+    border-radius:10px;
+    gap:1rem;
+    counter-reset: beat-counter;
+}
+.beats > div{
+    display:flex;
+    align-items:center;
+    flex-wrap: wrap;
+}
+.beats > div:first-child{
+    justify-content:space-between;
+}
+.beats > div:first-child > div{
+    display:flex;
+    gap:1rem;
+}
+.beats button{
+    display:flex;
+    align-items:center;
+    border:1px solid var(--color-border);
+    padding:10px;
+    gap:10px;
+    background-color:var(--color-background);
+    transition:background 200ms ease;
+}
+.beats button:hover{
+    background-color:var(--color-button);
+}
+.beats button > img{
+    width:24px;
+}
+.beats > div:not(:first-child){
+    padding:1rem;
+    background-color:#0a1425;
+    gap:2rem;
+    counter-reset:chord-counter;
+}
+.beats > div:not(:first-child) > div:first-child{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+.beats > div:not(:first-child) > div:first-child > div:first-child{
+    background: url('../icon/menu2.svg') center / 100% no-repeat;
+    width:28px;
+    height:28px;
+}
+.beats > div:not(:first-child) > div:first-child > span{
+    background-color:var(--color-purple);
+    padding:5px 10px;
+    border-radius:5px;
+}
+.beats > div:nth-child(even) > div:first-child > span{
+    background-color:var(--color-green);
+}
+.beats > div:last-child > div:last-child > span{
+    background-color:var(--color-dark);
+}
+.beats > div:not(:first-child) > div:first-child > span::before{
+    counter-increment: beat-counter; 
+    content: counter(beat-counter, upper-alpha);
+}
+.beats > div > span{
+    position: relative;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+}
+.beats > div > span::before{
+    position: absolute;
+    top:50%;
+    left:-40%;
+    transform:translateY(-50%);
+    counter-increment: chord-counter; 
+    content: counter(chord-counter, decimal);
+}
+.beats > div:not(:first-child) > div:last-child{
+    display:flex;
+    margin-left:auto;
+    gap:1rem;
+}
+.beats > div:not(:first-child) > div:last-child > button{
+    width:40px;
+    height:40px;
+    border-radius:5px;
+}
+.beats > div:not(:first-child) > div:last-child > button:hover{
+    filter: brightness(1.8);
+}
+.beats > div:not(:first-child) > div:last-child > button.copy{
+    background:url('../icon/copy.svg') center / 60% no-repeat, var(--color-background);
+}
+.beats > div:not(:first-child) > div:last-child > button.setting{
+    background:url('../icon/setting.svg') center / 60% no-repeat, var(--color-background);
+}
+.beats > div:not(:first-child) > div:last-child > button.delete{
+    background:url('../icon/delete.svg') center / 60% no-repeat, var(--color-background);
+}
+
+/* .beats{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    list-style-type:none;
+    padding:10px 2rem 5rem 2rem;
+    width:90%;
+    margin:auto;
+    font-size: larger;
+    gap:2rem;
+    counter-reset: beat-counter;
+}
+.beats > div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.beats > div::before{
+    counter-increment: beat-counter; 
+    content: counter(beat-counter, upper-alpha);
+    min-width: 30px; 
+}
+.beats > div > div{
+    width:100%;
+    display:flex;
+    justify-content:left;
+    flex-wrap:wrap;
+    gap:2rem;
+    background-color:var(--color-surface);
+    border-radius:10px;
+    padding:2rem;
+    counter-reset:chord-counter;
+}
+.beats > div > div > span{
+    position:relative;
+    display:block;
+    align-items:center;
+    width:50px;
+    height:50px;
+    border-radius:10px;
+}
+.beats > div > div > span::before{
+    position:absolute;
+    top:50%;
+    left:-40%;
+    transform:translateY(-50%);
+    counter-increment: chord-counter; 
+    content: counter(chord-counter, decimal);
+} */

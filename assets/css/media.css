@@ -1,0 +1,27 @@
+@media (max-width: 850px) {
+    header{
+        flex-wrap:wrap;
+        gap:1.5rem;
+    }
+    header > div:last-child{
+        justify-content:center;
+    }
+    .board{
+        width:90%;
+        padding:1rem;
+        margin:2rem auto;
+        grid-template-columns:repeat(4, 1fr);
+    }
+}
+@media (max-width: 600px) {
+    header > div:last-child{
+        flex-wrap:wrap;
+        gap:1rem;
+    }
+    header .master{
+        margin-top:1rem;
+    }
+    .board{
+        grid-template-columns:repeat(3, 1fr);
+    }
+}
